@@ -4,7 +4,7 @@
 <img src="data/image_result.jpg" alt="landing graphic" height="300px"/>
 </p>
 
-This repository contains scripts to convert Tensorflow checkpoint file to TensorRT graph and to inference Object Detection Network using Tensorflor-TensorRT graph.
+This repository contains scripts to convert Tensorflow checkpoint file to TensorRT graph and to inference Object Detection Network using Tensorflow-TensorRT graph.
 
 <a name="Usage"></a>
 Usage
@@ -45,7 +45,7 @@ GRAPH_PATH = os.path.join(OUTPUT_DIR, 'data', 'trt_graph.pb')
 ```
 
 ## Inference Object detection using TF-TRT graph
-If you created a tf-trt graph using the preceding code, you can find the trt_graph.pb file in the model folder. Copy the `image.jpg` file you want to see the results in the model folder. The following command saves the result using the SSD-inception-v2 model trained with the COCO dataset.
+If you create a tf-trt graph using the `trt_make.py`, you can find the `trt_graph.pb` in the model folder. Copy the input image file `image.jpg` in the model folder. `trt_inference.py` inference the input image file using the SSD-inception-v2 model trained with the COCO dataset and saves the result.
 ```
 python trt_inferernce.py
 ```
